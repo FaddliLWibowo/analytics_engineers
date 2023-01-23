@@ -2,7 +2,7 @@
 
 with 
     customers as ( select * from {{ ref("customer") }}
-    produk as ( select * from {{ ref("produk") }}
+    product as ( select * from {{ ref("product") }}
     stores as ( select * from {{ ref("stores") }}
     orders as (
 
