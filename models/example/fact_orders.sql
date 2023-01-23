@@ -1,9 +1,9 @@
 {{ config (materialized="table") }}
 
 with 
-    customers as (select * from {{ ref("dim_customers") }}),
+    customer as (select * from {{ ref("dim_customers") }}),
+    dates as (select * from {{ ref("dim_dates") }}),
     product as (select * from {{ ref("dim_products") }}),
-    stores as (select * from {{ ref("dim_stores") }}),
     orders as (
         select
             customer_id,
