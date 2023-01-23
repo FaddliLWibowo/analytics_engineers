@@ -1,9 +1,9 @@
 {{ config (materialized="table") }}
 
 with 
-    customers as ( select * from {{ ref("customer") }}
-    product as ( select * from {{ ref("product") }}
-    stores as ( select * from {{ ref("stores") }}
+    customers as (select * from {{ ref("customer") }}),
+    product as (select * from {{ ref("product") }}),
+    stores as (select * from {{ ref("stores") }}),
     orders as (
 
         select
