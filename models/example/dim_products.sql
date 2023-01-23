@@ -1,4 +1,4 @@
-{{ config (materialized="view") }}
+{{ config (materialized="table") }}
 
 with product as (
     select product_id, name, description, price from raw_products
